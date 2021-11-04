@@ -1,1 +1,11 @@
-import React from "react";
+import React from 'react'
+
+function ActiveQuiz() {
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
+export default ActiveQuiz
