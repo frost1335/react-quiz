@@ -6,7 +6,8 @@ import classes from "./Quiz.module.css";
 
 class Quiz extends Component {
   state = {
-    isFinished: true,
+    results: {}, // {[id]: success}
+    isFinished: false,
     activeQuestion: 0,
     answerState: null, // { [id]: 'success' || 'error' }
     quiz: [
@@ -44,10 +45,16 @@ class Quiz extends Component {
     }
 
     const question = this.state.quiz[this.state.activeQuestion];
+    const results = this.state.results;
 
     if (question.rightAnswerId === answerId) {
+      if (!results[question.id]) {
+        results[question.id] = "success";
+      }
+
       this.setState({
         answerState: { [answerId]: "success" },
+        results,
       });
 
       const timeout = window.setTimeout(() => {
@@ -63,8 +70,10 @@ class Quiz extends Component {
         window.clearTimeout(timeout);
       }, 500);
     } else {
+      results[question.id] = "error";
       this.setState({
         answerState: { [answerId]: "error" },
+        results,
       });
     }
   };
@@ -80,7 +89,7 @@ class Quiz extends Component {
           <h1>Ответьте на все вопросы</h1>
 
           {this.state.isFinished ? (
-            <FinishedQuiz />
+            <FinishedQuiz results={this.state.results} quiz={this.state.quiz} />
           ) : (
             <ActiveQuiz
               answers={this.state.quiz[this.state.activeQuestion].answers}
