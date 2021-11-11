@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ActiveQuiz from "../../components/ActiveQuiz/ActiveQuiz";
 import FinishedQuiz from "../../components/FinishedQuiz/FinishedQuiz";
-import { useParamsHook } from "../../hook/useParams";
 
 import classes from "./Quiz.module.css";
 
@@ -93,11 +92,10 @@ class Quiz extends Component {
   };
 
   componentDidMount() {
-    console.log('Quiz id = ', this.props);
+    console.log("Quiz id = ", this.props);
   }
 
   render() {
-    const [params] = useParamsHook()
     return (
       <div className={classes.Quiz}>
         <div className={classes.QuizWrapper}>
