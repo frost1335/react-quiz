@@ -7,7 +7,7 @@ export const QuizList = (props) => {
     return [1, 2, 3].map((quiz, index) => {
       return (
         <li key={index}>
-          <NavLink to={"/quiz/" + quiz}>Тест {quiz}</NavLink>
+          <NavLink param={quiz} to={"/quiz/" + quiz}>Тест {quiz}</NavLink>
         </li>
       );
     });
