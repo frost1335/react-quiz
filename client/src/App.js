@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Layout>
         <Routes>
-          <Route path="/auth" element={<Auth />} />
+          <Route path="/auth/:id" element={<Auth />} />
           <Route path="/quiz-creator" element={<QuizCreator />} />
           <Route path="/quiz/:id" element={<Quiz />} />
           <Route path="/" element={<QuizList />} />

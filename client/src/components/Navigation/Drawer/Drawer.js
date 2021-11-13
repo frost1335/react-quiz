@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const links = [
   { to: "/", label: "Список" },
-  { to: "/auth", label: "Авторизация" },
+  { to: `/auth/${Math.random()}`, label: "Авторизация" },
   { to: "/quiz-creator", label: "Создать тест" },
 ];
 
@@ -23,7 +23,7 @@ class Drawer extends Component {
   }
 
   clickHandler = () => {
-    this.props.onClose()
+    this.props.onClose();
   };
 
   render() {

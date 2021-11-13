@@ -1,11 +1,17 @@
 import React from "react";
 import classes from "./Input.module.css";
+import { useLocation } from "react-router";
 
 const isInvalid = ({ valid, touched, shouldValidate }) => {
   return !valid && shouldValidate && touched;
 };
 
 const Input = (props) => {
+
+  const location = useLocation()
+
+  console.log(location);
+
   const inputType = props.type || "text";
   const cls = [classes.Input];
   const htmlFor = `${inputType}-${Math.random()}`;

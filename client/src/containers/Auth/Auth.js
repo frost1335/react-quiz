@@ -6,9 +6,7 @@ import Input from "../../components/UI/Input/Input";
 export class Auth extends Component {
   state = {
     formControls: {
-      email: {
-          
-      },
+      email: {},
       password: {},
     },
   };

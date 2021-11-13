@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ActiveQuiz from "../../components/ActiveQuiz/ActiveQuiz";
 import FinishedQuiz from "../../components/FinishedQuiz/FinishedQuiz";
-
 import classes from "./Quiz.module.css";
 
 class Quiz extends Component {
