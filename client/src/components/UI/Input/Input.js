@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Input.module.css";
-import { useLocation } from "react-router";
+import { useParams } from "react-router";
 
 const isInvalid = ({ valid, touched, shouldValidate }) => {
   return !valid && shouldValidate && touched;
@@ -8,7 +8,7 @@ const isInvalid = ({ valid, touched, shouldValidate }) => {
 
 const Input = (props) => {
 
-  const location = useLocation()
+  const location = useParams()
 
   console.log(location);
 
