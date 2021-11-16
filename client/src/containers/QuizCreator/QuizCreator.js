@@ -15,25 +15,25 @@ const createOptionControl = (number) => {
 };
 
 const createFormControls = () => {
-    return {
-        question: createControl(
-          {
-            label: "Введите вопрос",
-            errorMessage: "Вопрос не может быть пустым",
-          },
-          { required: true }
-        ),
-        option1: createOptionControl(1),
-        option2: createOptionControl(2),
-        option3: createOptionControl(3),
-        option4: createOptionControl(4),
+  return {
+    question: createControl(
+      {
+        label: "Введите вопрос",
+        errorMessage: "Вопрос не может быть пустым",
       },
-}
+      { required: true }
+    ),
+    option1: createOptionControl(1),
+    option2: createOptionControl(2),
+    option3: createOptionControl(3),
+    option4: createOptionControl(4),
+  };
+};
 
 export class QuizCreator extends Component {
   state = {
     quiz: [],
-    formControls: createFormControls()
+    formControls: createFormControls(),
   };
 
   render() {
