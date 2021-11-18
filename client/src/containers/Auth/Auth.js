@@ -101,9 +101,9 @@ export class Auth extends Component {
   }
 
   render() {
-    const loginHandler = () => {};
+    const loginHandler = () => { };
 
-    const registerHandler = () => {};
+    const registerHandler = () => { };
 
     const submitHandler = (event) => {
       event.preventDefault();
