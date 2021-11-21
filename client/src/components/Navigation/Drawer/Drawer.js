@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const links = [
   { to: "/", label: "Список" },
-  { to: `/auth/${Math.random()}`, label: "Авторизация" },
+  { to: "/auth", label: "Авторизация" },
   { to: "/quiz-creator", label: "Создать тест" },
 ];
 
