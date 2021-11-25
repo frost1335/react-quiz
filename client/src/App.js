@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./hoc/Layout/Layout";
 import QuizFragment from "./containers/Quiz/QuizFragment";
-import { QuizList } from "./containers/QuizList/QuizList";
+import QuizList from './containers/QuizList/QuizList'
 import { Auth } from "./containers/Auth/Auth";
 import { QuizCreator } from "./containers/QuizCreator/QuizCreator";
 
